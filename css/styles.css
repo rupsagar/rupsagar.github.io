@@ -12,21 +12,21 @@
     align-items: left;
     overflow: auto;
 }
-.profile-pic-rounded{
+.header .profile-pic-rounded{
     float:left;
     padding: 2.5% 6%;
     vertical-align: middle;
     width: 10%;
     clip-path: circle(25% at 50% 44%);
 }
-.name-designation{
+.header .name-designation{
     padding: 5% 0%;
     position: relative;
 }
-.social-media{
+.header .social-media{
     display: flex;
 }
-.social-media-icon{
+.header .social-media .social-media-icon{
     width: 50%;
 }
 .tabs{
