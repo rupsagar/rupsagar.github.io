@@ -1,41 +1,45 @@
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0%;
+    padding: 0% 0%;
 }
 .header{
-    min-height: 25vh;
+    min-height: 20vh;
     width: 100%;
-    background-image: linear-gradient(rgba(98, 119, 204, 0.7), rgba(37, 68, 194, 0.7));
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
     background-position: center;
     background-size: cover;
     position: relative;
     align-items: left;
+    overflow: auto;
 }
-.header .profile_pic{
-    padding: 2% 6%;
-    display: inline-block;
-    vertical-align: top;
+.profile-pic-rounded{
+    float:left;
+    padding: 2.5% 6%;
+    vertical-align: middle;
+    width: 10%;
+    clip-path: circle(25% at 50% 44%);
 }
-.header .profile_pic img.rounded{
-    width: 125px;
-    clip-path: circle(43% at 50% 45%);
-}
-.header .name_designation{
-    display: inline-block;
+.name-designation{
     padding: 5% 0%;
     position: relative;
 }
+.social-media{
+    display: flex;
+}
+.social-media-icon{
+    width: 50%;
+}
 .tabs{
-    min-height: 100vh;
+    min-height: 5vh;
     width: 100%;
-    background-image: linear-gradient(rgba(98, 119, 204, 0.7), rgba(37, 68, 194, 0.7));
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0));
     background-position: center;
     background-size: cover;
     position: relative;
 }
 nav{
     display: flex;
-    padding: 2% 6%;
+    padding: 0% 6%;
     justify-content: space-between;
     align-items: center;
 }
@@ -50,7 +54,7 @@ nav{
     position: relative;
 }
 .nav-links ul li a{
-    color: black;
+    color: white;
     text-decoration: none;
     font-size: 13px
 }
@@ -58,7 +62,7 @@ nav{
     content: "";
     width: 0%;
     height: 2px;
-    background-color: brown;
+    background-color: yellow;
     display: block;
     margin: auto;
     transition: 0.5s;
@@ -66,12 +70,21 @@ nav{
 .nav-links ul li:hover:after{
     width: 100%;
 }
+.home-tab{
+    min-height: 60vh;
+    width: 100%;
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(253, 255, 255));
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
 .text-box{
     width: 90%;
     color: black;
     position: relative;
-    top: 50%;
+    top: 10vh;
     left: 50%;
     transform: translate(-50%,-50%);
     text-align: center;
 }
+
