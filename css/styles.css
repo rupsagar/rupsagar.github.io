@@ -3,6 +3,29 @@
     padding: 0;
 }
 .header{
+    min-height: 25vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(98, 119, 204, 0.7), rgba(37, 68, 194, 0.7));
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    align-items: left;
+}
+.header .profile_pic{
+    padding: 2% 6%;
+    display: inline-block;
+    vertical-align: top;
+}
+.header .name_designation{
+    display: inline-block;
+    padding: 5% 0%;
+    position: relative;
+}
+img.rounded{
+    width: 125px;
+    clip-path: circle(43% at 50% 45%);
+}
+.tabs{
     min-height: 100vh;
     width: 100%;
     background-image: linear-gradient(rgba(98, 119, 204, 0.7), rgba(37, 68, 194, 0.7));
@@ -15,9 +38,6 @@ nav{
     padding: 2% 6%;
     justify-content: space-between;
     align-items: center;
-}
-nav img{
-    width: 150px;
 }
 .nav-links{
     flex: 1;
@@ -49,7 +69,7 @@ nav img{
 .text-box{
     width: 90%;
     color: black;
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
