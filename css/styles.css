@@ -16,14 +16,14 @@
     display: inline-block;
     vertical-align: top;
 }
+.header .profile_pic img.rounded{
+    width: 125px;
+    clip-path: circle(43% at 50% 45%);
+}
 .header .name_designation{
     display: inline-block;
     padding: 5% 0%;
     position: relative;
-}
-img.rounded{
-    width: 125px;
-    clip-path: circle(43% at 50% 45%);
 }
 .tabs{
     min-height: 100vh;
