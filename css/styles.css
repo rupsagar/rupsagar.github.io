@@ -19,15 +19,25 @@
     width: 10%;
     clip-path: circle(25% at 50% 44%);
 }
+.head{
+    font-size: 8vh;
+    line-height: 2vh;
+}
+.subhead{
+    font-size: 5vh;
+    line-height: 2vh;
+}
 .name-designation{
-    padding: 5% 0%;
     position: relative;
+    padding: 5.5% 0%;
 }
 .social-media{
     display: flex;
+    margin-top: 1vh;
 }
 .social-media-icon{
     width: 2vw;
+    margin-inline: 0.4vw;
 }
 .tabs{
     min-height: 5vh;
@@ -93,6 +103,47 @@ nav{
     text-align: justify;
     vertical-align: top;
 }
+.research-tab{
+    position: absolute;
+    min-height: 10vh;
+    width: 100%;
+    padding: 12% 0%;
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(253, 255, 255));
+    background-position: center;
+    background-size: cover;
+}
+.research-textbox{
+    position: absolute;
+    padding-top: 0%;
+    width: 90%;
+    color: black;
+    margin-top: -5%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: justify;
+    vertical-align: top;
+}
+.publications-tab{
+    position: absolute;
+    min-height: 10vh;
+    width: 100%;
+    padding: 12% 0%;
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(253, 255, 255));
+    background-position: center;
+    background-size: cover;
+}
+.publications-textbox{
+    position: absolute;
+    margin-top: -2%;
+    width: 90%;
+    color: black;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: justify;
+}
+.publications-list li{
+    margin: 1% 0;
+}
 .aboutme-tab{
     position: absolute;
     min-height: 10vh;
@@ -104,7 +155,7 @@ nav{
 }
 .aboutme-textbox{
     position: absolute;
-    padding-top: 0%;
+    margin-top: 3%;
     width: 90%;
     color: black;
     left: 50%;
@@ -113,4 +164,4 @@ nav{
 }
 .aboutme-list li{
     margin: 1% 0;
-  }
+}
