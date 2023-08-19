@@ -4,17 +4,17 @@
 }
 .header{
     min-height: 20vh;
+    max-height: 30vh;
     width: 100%;
     background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
     background-position: center;
     background-size: cover;
     position: relative;
     align-items: left;
-    overflow: auto;
 }
 .profile-pic-rounded{
     float:left;
-    padding: 2.5% 6%;
+    padding: 2% 6%;
     vertical-align: middle;
     width: 10%;
     clip-path: circle(25% at 50% 44%);
@@ -27,12 +27,12 @@
     display: flex;
 }
 .social-media-icon{
-    width: 50%;
+    width: 2vw;
 }
 .tabs{
     min-height: 5vh;
     width: 100%;
-    background-image: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0));
+    background-color: black;
     background-position: center;
     background-size: cover;
     position: relative;
@@ -50,18 +50,18 @@ nav{
 .nav-links ul li{
     list-style: none;
     display: inline-block;
-    padding: 8px 12px;
+    padding: 1% 1.5%;
     position: relative;
 }
 .nav-links ul li a{
     color: white;
     text-decoration: none;
-    font-size: 13px
+    font-size: 3vh
 }
 .nav-links ul li::after{
     content: "";
     width: 0%;
-    height: 2px;
+    height: 0.4vh;
     background-color: yellow;
     display: block;
     margin: auto;
@@ -70,21 +70,47 @@ nav{
 .nav-links ul li:hover:after{
     width: 100%;
 }
+.nav-links a.active-tab{
+    border-bottom: 0.8vh solid yellow;
+}
 .home-tab{
-    min-height: 60vh;
+    position: absolute;
+    min-height: 10vh;
     width: 100%;
+    padding: 12% 0%;
     background-image: linear-gradient(rgb(255, 255, 255), rgb(253, 255, 255));
     background-position: center;
     background-size: cover;
-    position: relative;
 }
-.text-box{
+.home-textbox{
+    position: absolute;
+    padding-top: 0%;
     width: 90%;
     color: black;
-    position: relative;
-    top: 10vh;
+    margin-top: -5%;
     left: 50%;
     transform: translate(-50%,-50%);
-    text-align: center;
+    text-align: justify;
+    vertical-align: top;
 }
-
+.aboutme-tab{
+    position: absolute;
+    min-height: 10vh;
+    width: 100%;
+    padding: 12% 0%;
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(253, 255, 255));
+    background-position: center;
+    background-size: cover;
+}
+.aboutme-textbox{
+    position: absolute;
+    padding-top: 0%;
+    width: 90%;
+    color: black;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: justify;
+}
+.aboutme-list li{
+    margin: 1% 0;
+  }
