@@ -1,55 +1,72 @@
 *{
-    margin: 0%;
-    padding: 0% 0%;
+    color: black;
+    margin: 0vh 0vw;
+    padding: 0vh 0vw;
+}
+body{
+    position: relative;
+    height: 100px;
 }
 .header{
-    min-height: 20vh;
-    max-height: 30vh;
+    position: fixed;
+    top: 0px;
+    height: 150px;
     width: 100%;
-    background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
+    background-color: rgb(126, 143, 218);
     background-position: center;
     background-size: cover;
-    position: relative;
     align-items: left;
+    display: inline-flex;
+    padding: 0% 6%;
+}
+.img-placeholder{
+    position: relative;
+    width: 10%;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 .profile-pic-rounded{
-    float:left;
-    padding: 2% 6%;
-    vertical-align: middle;
-    width: 10%;
-    clip-path: circle(25% at 50% 44%);
+    position: relative;
+    height: 100px;
+    /* width: 20px; */
+    clip-path: circle(40% at 50% 44%);
+    /* object-fit: contain; */
+}
+.name-social{
+    position: relative;
+    left: 50px;
+    width: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.name{
+    font-weight: bold;
 }
 .head{
-    font-size: 8vh;
-    line-height: 2vh;
+    font-size: 50px;
 }
 .subhead{
-    font-size: 5vh;
-    line-height: 2vh;
-}
-.name-designation{
-    position: relative;
-    padding: 5.5% 0%;
+    font-size: 30px;
 }
 .social-media{
     display: flex;
-    margin-top: 1vh;
 }
 .social-media-icon{
-    width: 2vw;
-    margin-inline: 0.4vw;
+    width: 20px;
+    margin-inline: 5px;
 }
 .tabs{
-    min-height: 5vh;
+    position: fixed;
+    top: 150px;
     width: 100%;
-    background-color: black;
+    height: 30px;
+    background-color: rgb(56, 51, 51);
     background-position: center;
     background-size: cover;
-    position: relative;
 }
 nav{
+    width: 98%;
     display: flex;
-    padding: 0% 6%;
     justify-content: space-between;
     align-items: center;
 }
@@ -60,18 +77,18 @@ nav{
 .nav-links ul li{
     list-style: none;
     display: inline-block;
-    padding: 1% 1.5%;
+    padding: 5px 1%;
     position: relative;
 }
 .nav-links ul li a{
     color: white;
     text-decoration: none;
-    font-size: 3vh
+    font-size: 15px;
 }
 .nav-links ul li::after{
     content: "";
     width: 0%;
-    height: 0.4vh;
+    height: 2px;
     background-color: yellow;
     display: block;
     margin: auto;
@@ -81,87 +98,46 @@ nav{
     width: 100%;
 }
 .nav-links a.active-tab{
-    border-bottom: 0.8vh solid yellow;
+    border-bottom: 3px solid yellow;
 }
-.home-tab{
-    position: absolute;
-    min-height: 10vh;
-    width: 100%;
-    padding: 12% 0%;
-    background-image: linear-gradient(rgb(255, 255, 255), rgb(253, 255, 255));
-    background-position: center;
-    background-size: cover;
+.data-region{
+    position: relative;
+    top: 190px;
+    left: 10%;
+    width: 80%;
+    z-index: -1;
 }
 .home-textbox{
-    position: absolute;
-    padding-top: 0%;
-    width: 90%;
-    color: black;
-    margin-top: -5%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: justify;
-    vertical-align: top;
-}
-.research-tab{
-    position: absolute;
-    min-height: 10vh;
+    position: relative;
+    top: 25px;
     width: 100%;
-    padding: 12% 0%;
-    background-image: linear-gradient(rgb(255, 255, 255), rgb(253, 255, 255));
-    background-position: center;
-    background-size: cover;
+    color: black;
+    text-align: justify;
 }
 .research-textbox{
-    position: absolute;
-    padding-top: 0%;
-    width: 90%;
-    color: black;
-    margin-top: -5%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: justify;
-    vertical-align: top;
-}
-.publications-tab{
-    position: absolute;
-    min-height: 10vh;
+    position: relative;
+    top: 25px;
     width: 100%;
-    padding: 12% 0%;
-    background-image: linear-gradient(rgb(255, 255, 255), rgb(253, 255, 255));
-    background-position: center;
-    background-size: cover;
+    color: black;
+    text-align: justify;
 }
 .publications-textbox{
-    position: absolute;
-    margin-top: -2%;
-    width: 90%;
+    position: relative;
+    top: 25px;
+    width: 100%;
     color: black;
-    left: 50%;
-    transform: translate(-50%,-50%);
     text-align: justify;
 }
 .publications-list li{
     margin: 1% 0;
 }
-.aboutme-tab{
-    position: absolute;
-    min-height: 10vh;
-    width: 100%;
-    padding: 12% 0%;
-    background-image: linear-gradient(rgb(255, 255, 255), rgb(253, 255, 255));
-    background-position: center;
-    background-size: cover;
-}
 .aboutme-textbox{
-    position: absolute;
-    margin-top: 3%;
-    width: 90%;
+    position: relative;
+    top: 25px;
+    width: 100%;
     color: black;
-    left: 50%;
-    transform: translate(-50%,-50%);
     text-align: justify;
 }
 .aboutme-list li{
-    margin: 1% 0;
+    margin: 1% 0%;
 }
