@@ -1,54 +1,8 @@
 <!DOCTYPE html>
   <html dir="ltr" lang="en-US">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="author" content="Rupsagar Chatterjee">
-      <meta name="description" content="Personal Website - Rupsagar Chatterjee">
-      <meta name="keywords" content="Rupsagar Chatterjee">
-      <title>Home | Rupsagar Chatterjee</title>
-      <link rel="stylesheet" href="css/styles.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
+    <head id="head" include-html="head.html"></head>
     <body>
-      <section class="header">
-        <div class="img-placeholder">
-          <img src="res/img/T4444.jpg" class="profile-pic-rounded">
-        </div>
-        <div class="name-social">
-          <div class="name">
-            <span class="head">R</span><span class="subhead">UPSAGAR </span>
-            <span class="head">C</span><span class="subhead">HATTERJEE</span>
-          </div>
-          <div class="social-media">
-            <div>
-              <a href="https://www.linkedin.com/in/rupsagar-chatterjee" target="_blank">
-                <img src="res/icon/linkedin.svg" class="social-media-icon">
-              </a>
-            </div>
-            <div>
-              <a href="https://github.com/rupsagar" target="_blank">
-                <img src="res/icon/github.svg" class="social-media-icon">
-              </a>
-            </div>
-            <div>
-              <a href="https://scholar.google.com/citations?user=OopnhJAAAAAJ&hl=en" target="_blank">
-                <img src="res/icon/google-scholar.svg" class="social-media-icon">
-              </a>
-            </div>
-            <div>
-              <a href="https://www.researchgate.net/profile/Rupsagar-Chatterjee" target="_blank">
-                <img src="res/icon/researchgate.svg" class="social-media-icon">
-              </a>
-            </div>
-            <div>
-              <a href="https://orcid.org/0000-0002-9732-0718" target="_blank">
-                <img src="res/icon/orcid.svg" class="social-media-icon">
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section id="header" include-html="header.html" class="header"></section>
       <section class="tabs">
         <nav>
           <div class="nav-links">
@@ -71,4 +25,6 @@
         </div>
       </section>
     </body>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/include-html.min.js"></script>
   </html>

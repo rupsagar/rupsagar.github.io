@@ -97,7 +97,7 @@ nav{
 .nav-links ul li:hover:after{
     width: 100%;
 }
-.nav-links a.active-tab{
+.nav-links ul li a.active-tab{
     border-bottom: 3px solid yellow;
 }
 .data-region{
