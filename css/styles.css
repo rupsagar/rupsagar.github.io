@@ -100,6 +100,21 @@ nav{
 .nav-links ul li a.active-tab{
     border-bottom: 3px solid yellow;
 }
+.footer{
+    position: relative;
+    top: 300px;
+    height: 25px;
+    width: 88%;
+    background-color: rgb(126, 143, 218);
+    background-position: center;
+    background-size: cover;
+    align-items: left;
+    display: inline-flex;
+    padding: 0% 6%;
+}
+.footer .last-updated{
+    text-align: center;
+}
 .data-region{
     position: relative;
     top: 190px;
@@ -114,13 +129,6 @@ nav{
     color: black;
     text-align: justify;
 }
-.research-textbox{
-    position: relative;
-    top: 25px;
-    width: 100%;
-    color: black;
-    text-align: justify;
-}
 .publications-textbox{
     position: relative;
     top: 25px;
@@ -129,7 +137,23 @@ nav{
     text-align: justify;
 }
 .publications-list li{
-    margin: 1% 0;
+    margin: 1% 0%;
+}
+.research-textbox{
+    position: relative;
+    top: 25px;
+    width: 100%;
+    color: black;
+    text-align: justify;
+}
+.research-list li{
+    margin: 1% 0%;
+}
+.research-sub-list{
+    list-style-type: square;
+}
+.research-sub-list li{
+    margin: 1% 2%
 }
 .aboutme-textbox{
     position: relative;
