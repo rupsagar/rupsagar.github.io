@@ -108,12 +108,12 @@ nav{
     background-color: rgb(126, 143, 218);
     background-position: center;
     background-size: cover;
-    align-items: left;
-    display: inline-flex;
+    align-items: center;
     padding: 0% 6%;
 }
 .footer .last-updated{
     text-align: center;
+    line-height: 25px;
 }
 .data-region{
     position: relative;
@@ -164,4 +164,11 @@ nav{
 }
 .aboutme-list li{
     margin: 1% 0%;
+}
+.resume-region{
+    position: relative;
+    top: 25px;
+    width: 100%;
+    color: black;
+    text-align: justify;
 }
