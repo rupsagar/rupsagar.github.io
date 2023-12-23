@@ -129,16 +129,6 @@ nav{
     color: black;
     text-align: justify;
 }
-.publications-textbox{
-    position: relative;
-    top: 25px;
-    width: 100%;
-    color: black;
-    text-align: justify;
-}
-.publications-list li{
-    margin: 1% 0%;
-}
 .research-textbox{
     position: relative;
     top: 25px;
@@ -155,20 +145,22 @@ nav{
 .research-sub-list li{
     margin: 1% 2%
 }
-.aboutme-textbox{
+hr.solid {
+    border-top: 1.5px solid black;
+}
+.gif-pos {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.publications-textbox{
     position: relative;
     top: 25px;
     width: 100%;
     color: black;
     text-align: justify;
 }
-.aboutme-list li{
+.publications-list li{
     margin: 1% 0%;
-}
-.resume-region{
-    position: relative;
-    top: 25px;
-    width: 100%;
-    color: black;
-    text-align: justify;
 }
