@@ -107,7 +107,7 @@ function writeViewerIP(ViewerIP, ViewerIPStr) {
         IP_Addr : ViewerIP,
         Lat_Long : localStorage.getItem("Lat_Long"),
         Loc_Stat : localStorage.getItem("Loc_Stat"),
-        Time : timeNowStr
+        Time_Stamp : timeNowStr
     });
 }
 
