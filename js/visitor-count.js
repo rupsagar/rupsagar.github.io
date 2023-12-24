@@ -26,14 +26,24 @@ import {getDatabase, set, get, update, remove, ref, child, onValue} from "https:
 
 const db = getDatabase();
 const dbName = "Page_Views";
-const APIURL = 'https://api.ipify.org?format=json';
+const APIURL = "https://api.ipify.org?format=json";
+const timeNow = new Date();
+const options = {day:"2-digit",
+                 month:"short",
+                 year:"numeric",
+                 hour:"2-digit",
+                 minute:"2-digit",
+                 second:"2-digit",
+                 timeZoneName:"short"}
+const timeNowStr = timeNow.toLocaleString('en-GB', options);
+console.log(timeNowStr);
 
 function callAPI() {
     // Make a GET request
     fetch(APIURL)
     .then(response => {
         if (!response.ok) {
-        throw new Error('Network response was not ok');
+        throw new Error("Network response was not ok");
         }
         return response.json();
     })
@@ -50,27 +60,29 @@ function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition, showError);
     } else {
-        localStorage.setItem("LatLong", "Geolocation is not supported by this browser");
+        localStorage.setItem("Loc_Stat", "Geolocation is not supported by this browser");
     }
 }
 
 function showPosition(position) {
-    localStorage.setItem("LatLong", position.coords.latitude + "; " + position.coords.longitude);
+    localStorage.setItem("Lat_Long", "[" + position.coords.latitude + "; " + position.coords.longitude + "]");
+    localStorage.setItem("Loc_Stat", "Location captured successfully");
 }
 
 function showError(error) {
+    localStorage.setItem("Lat_Long", "[" + -1 + "; " + -1 + "]");
     switch(error.code) {
         case error.PERMISSION_DENIED:
-            localStorage.setItem("LatLong", "User denied the request for Geolocation");
+            localStorage.setItem("Loc_Stat", "User denied the request for Geolocation");
             break;
         case error.POSITION_UNAVAILABLE:
-            localStorage.setItem("LatLong", "Location information is unavailable");
+            localStorage.setItem("Loc_Stat", "Location information is unavailable");
             break;
         case error.TIMEOUT:
-            localStorage.setItem("LatLong", "The request to get user location timed out");
+            localStorage.setItem("Loc_Stat", "The request to get user location timed out");
             break;
         case error.UNKNOWN_ERROR:
-            localStorage.setItem("LatLong", "An unknown error occurred");
+            localStorage.setItem("Loc_Stat", "An unknown error occurred");
             break;
     }
 }
@@ -92,8 +104,10 @@ function convViewerIPStr(ViewerIP){
 
 function writeViewerIP(ViewerIP, ViewerIPStr) {
     set(ref(db, dbName+"/"+ViewerIPStr), {
-        IP_Address : ViewerIP,
-        LatLong : localStorage.getItem("LatLong")
+        IP_Addr : ViewerIP,
+        Lat_Long : localStorage.getItem("Lat_Long"),
+        Loc_Stat : localStorage.getItem("Loc_Stat"),
+        Time : timeNowStr
     });
 }
 
