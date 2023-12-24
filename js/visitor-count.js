@@ -52,10 +52,6 @@ function getLocation() {
     } else {
         localStorage.setItem("LatLong", "Geolocation is not supported by this browser");
     }
-    if(localStorage.getItem("LatLong")) {
-       var LatLong = localStorage.getItem("LatLong");
-       console.log(LatLong);
-    }
 }
 
 function showPosition(position) {
