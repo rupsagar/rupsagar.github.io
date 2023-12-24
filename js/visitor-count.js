@@ -38,11 +38,45 @@ function callAPI() {
         return response.json();
     })
     .then(jsonData => {
+        getLocation();
         getViewerIP(jsonData);
     })
     .catch(error => {
         console.error(error);
     });
+}
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+    } else {
+        localStorage.setItem("LatLong", "Geolocation is not supported by this browser");
+    }
+    if(localStorage.getItem("LatLong")) {
+       var LatLong = localStorage.getItem("LatLong");
+       console.log(LatLong);
+    }
+}
+
+function showPosition(position) {
+    localStorage.setItem("LatLong", position.coords.latitude + "; " + position.coords.longitude);
+}
+
+function showError(error) {
+    switch(error.code) {
+        case error.PERMISSION_DENIED:
+            localStorage.setItem("LatLong", "User denied the request for Geolocation");
+            break;
+        case error.POSITION_UNAVAILABLE:
+            localStorage.setItem("LatLong", "Location information is unavailable");
+            break;
+        case error.TIMEOUT:
+            localStorage.setItem("LatLong", "The request to get user location timed out");
+            break;
+        case error.UNKNOWN_ERROR:
+            localStorage.setItem("LatLong", "An unknown error occurred");
+            break;
+    }
 }
 
 function getViewerIP(json){
@@ -62,7 +96,8 @@ function convViewerIPStr(ViewerIP){
 
 function writeViewerIP(ViewerIP, ViewerIPStr) {
     set(ref(db, dbName+"/"+ViewerIPStr), {
-        IP_Address : ViewerIP
+        IP_Address : ViewerIP,
+        LatLong : localStorage.getItem("LatLong")
     });
 }
 
