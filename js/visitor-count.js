@@ -36,14 +36,14 @@ const options = {day:"2-digit",
                  second:"2-digit",
                  timeZoneName:"short"}
 const timeNowStr = timeNow.toLocaleString('en-GB', options);
-console.log(timeNowStr);
+// console.log(timeNowStr);
 
 function callAPI() {
     // Make a GET request
     fetch(APIURL)
     .then(response => {
         if (!response.ok) {
-        throw new Error("Network response was not ok");
+            throw new Error("Network response was not ok");
         }
         return response.json();
     })
@@ -88,23 +88,27 @@ function showError(error) {
 }
 
 function getViewerIP(json){
-    var ViewerIP = json.ip;
-    var ViewerIPStr = convViewerIPStr(ViewerIP);
-    writeViewerIP(ViewerIP, ViewerIPStr)
+    var viewerIP = json.ip;
+    var viewerIPStr = convViewerIPStr(viewerIP);
+    writeViewerIP(viewerIP, viewerIPStr);
     countVisits();
 }
 
-function convViewerIPStr(ViewerIP){
-    var ViewerIPStr = ViewerIP.toString();
-    for (var i, i=0; i < ViewerIPStr.length; i++) {
-        ViewerIPStr = ViewerIPStr.replace(".", "-")
+function convViewerIPStr(viewerIP){
+    var viewerIPPath = viewerIP.toString();
+    var timeNowStrPath = timeNowStr;
+    for (var i, i = 0; i < viewerIPPath.length; i++) {
+        viewerIPPath = viewerIPPath.replace(".", "-");
     }
-    return ViewerIPStr;
+    timeNowStrPath = timeNowStrPath.substr(21, timeNowStrPath.length);
+    timeNowStrPath = timeNowStrPath.replace(" ", "");
+    timeNowStrPath = timeNowStrPath.replace(":", "_");
+    return viewerIPPath + "_" + timeNowStrPath;
 }
 
-function writeViewerIP(ViewerIP, ViewerIPStr) {
-    set(ref(db, dbName+"/"+ViewerIPStr), {
-        IP_Addr : ViewerIP,
+function writeViewerIP(viewerIP, viewerIPStr) {
+    set(ref(db, dbName+"/"+viewerIPStr), {
+        IP_Addr : viewerIP,
         Lat_Long : localStorage.getItem("Lat_Long"),
         Loc_Stat : localStorage.getItem("Loc_Stat"),
         Time_Stamp : timeNowStr
