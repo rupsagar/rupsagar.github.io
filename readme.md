@@ -7,5 +7,5 @@ Do let me know if you have any suggestions for improving the website or its cont
 
 ## Authors
 
-- Rupsagar Chatterjee
+- Rupsagar Chatterjee (he/him)
 
