@@ -148,6 +148,24 @@ nav{
 .research-list-para{
     margin: 1% 0%
 }
+input[type=checkbox] {
+    display: none;
+}
+input[type=checkbox]:checked ~ label > img {
+    transform: scale(1.5);
+    cursor: zoom-out;
+}
+.research-cdm {
+    display: flex;
+    justify-content: center;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.research-cdm img{
+    width: 500px;
+    cursor: zoom-in;
+    transition: 0.5s ease;
+}
 .research-thesis {
     display: flex;
     justify-content: center;
@@ -158,13 +176,6 @@ nav{
     width: 500px;
     cursor: zoom-in;
     transition: 0.5s ease;
-}
-input[type=checkbox] {
-    display: none;
-}
-input[type=checkbox]:checked ~ label > img {
-    transform: scale(1.5);
-    cursor: zoom-out;
 }
 .research-internship-2 {
     display: flex;
@@ -195,5 +206,15 @@ input[type=checkbox]:checked ~ label > img {
     text-align: justify;
 }
 .publications-list li{
+    margin: 1% 0%;
+}
+.resources-textbox{
+    position: relative;
+    top: 25px;
+    width: 100%;
+    color: black;
+    text-align: justify;
+}
+.resources-list li{
     margin: 1% 0%;
 }
