@@ -65,6 +65,18 @@
     git commit -am "Commit message"     # same effect
     ```
 
+## Log
+- ### To check commit log
+    ```bash
+    git log
+    ```
+
+## Move/Rename
+- ### To move or rename file and add to staging area
+    ```bash
+    git mv ./path1/oldfilename ./path2/newfilename
+    ```
+
 ## Branch
 - ### To see the current branch and all the available branches
     ```bash
