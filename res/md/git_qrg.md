@@ -53,6 +53,12 @@
     git reset <file>            # same as git restore --staged <filename>
     ```
 
+## List
+- ### To list all tracked files
+    ```bash
+    git ls-files
+    ```
+
 ## Commit
 - ### To commit from staging area
     ```bash
