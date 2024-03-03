@@ -120,9 +120,24 @@
     git branch -M main
     git push -u origin main
     ```
+- ### To view remote origin
+    ```bash
+    git remote show origin
+    git remote -v
+    git config --get remote.origin.url
+    ```
+- ### To change remote origin
+    ```bash
+    git remote set-url origin <url-from-https-or-ssh>
+    ```
 - ### To push all the branches
     ```bash
     git push -all
+    ```
+- ### To push specific branches
+    ```bash
+    git push origin <branch-name>                               # if local and remote branch names are same
+    git push origin <local-branch-name>:<remote-branch-name>    # if local and remote branch names are different
     ```
 
 ## Pull
