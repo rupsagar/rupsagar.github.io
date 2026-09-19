@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+  <html dir="ltr" lang="en-US">
+
+    <head id="html-head" include-html="/src/html/utils/title.html"></head>
+
+    <body>
+
+      <section id="header" include-html="/src/html/utils/header.html"></section>
+
+      <section class="tabs">
+        <div class="nav-links">
+          <ul>
+            <li><a href="/src/html/pages/home.html">HOME</a></li>
+            <li><a href="/src/html/pages/projects.html">PROJECTS</a></li>
+            <li><a href="/src/html/pages/publications.html" class="active-tab">PUBLICATIONS</a></li>
+            <!-- <li><a href="/src/html/pages/miscellaneous.html">MISCELLANEOUS</a></li> -->
+          </ul>
+        </div>
+      </section>
+
+      <section class="data-region">
+        <div class="publications-textbox">
+          <div> <!--journal papers-->
+            <h1>Journal Articles:</h1>
+            <ol reversed class="publications-list">
+              <li>
+                <b>R. Chatterjee</b> and S. K. Mishra,  
+                &#8220<span style="color: red;">Flutter in functionally graded conical shell under follower force</span>,&#8221
+                <span style="color: blue;">Applied Mathematical Modelling, 136, 115618</span>.
+                [<a href="https://doi.org/10.1016/j.apm.2024.07.025" target="_blank">article</a>]
+              </li>
+              <li>
+                <b>R. Chatterjee</b> and S. K. Mishra,  
+                &#8220<span style="color: red;">Supersonic thermomechanical dynamic instability analysis of 
+                  imperfect FG-GPLRC conical shell under nonconservative loading,</span>,&#8221
+                <span style="color: blue;">Archive of Applied Mechanics, 95, 170</span>.
+                [<a href="https://doi.org/10.1007/s00419-025-02878-5" target="_blank">article</a>]
+              </li>
+            </ol>
+          </div>
+          <div> <!--conferences-->
+            <h1 style="margin-top: 2%;">Conferences:</h1>
+            <ol reversed class="publications-list">
+              <li>
+                  C. Bose, <b>R. Chatterjee</b>, R. B. Nath, A. Maity, R. Chatterjee, S. Patel, S. Gupta, and S. Sarkar, 
+                  &#8220<span style="color: red;">Nonlinear fluid-structure interaction dynamics of an elastically mounted flapping airfoil in an inviscid fluid</span>,&#8221
+                  <span style="color: blue;">Proceedings of the tenth Conference on Nonlinear Systems and Dynamics (CNSD-2016)</span>, 
+                  Indian Institute of Science Education and Research, Kolkata, 16-18 December 2016. 
+                  [<a href="https://www.researchgate.net/profile/Chandan-Bose-5/publication/309159621_Nonlinear_fluid-structure_interaction_dynamics_of_an_elastically_mounted_flapping_airfoil_in_an_inviscid_fluid/links/5864e0bd08ae8fce490c1af8/Nonlinear-fluid-structure-interaction-dynamics-of-an-elastically-mounted-flapping-airfoil-in-an-inviscid-fluid.pdf" target="_blank">abstract</a>]
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section id="footer" include-html="/src/html/utils/footer.html"></section>
+
+    </body>
+
+    <script src="/src/js/jquery_3.6.0.min.js"></script>
+    <script src="/src/js/include_html.min.js"></script>
+    <script type="module" src="/src/js/visitor_count.min.js"></script>
+    <script type="module" src="/src/js/md_block.js"></script>
+    <script src="/src/js/dark_mode.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/zero-md@3?register"></script>
+
+  </html>
