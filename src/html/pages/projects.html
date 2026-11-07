@@ -1,0 +1,205 @@
+---
+---
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+    {% include title.html %}
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a class="brand" href="/src/html/pages/home.html" aria-label="Rupsagar Chatterjee, home">
+                <span class="brand-mark">RC</span>
+                <span class="brand-name">Rupsagar Chatterjee</span>
+            </a>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="/src/html/pages/home.html">Home</a>
+                <a href="/src/html/pages/projects.html" aria-current="page">Projects</a>
+                <a href="/src/html/pages/publications.html">Publications</a>
+                <a href="/src/html/pages/contact.html">Contact</a>
+            </nav>
+            <button class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+                <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+                <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <main id="main">
+
+        <section class="page-hero">
+            <div class="container">
+                <h1>Projects</h1>
+                <p>Research activities I have undertaken to date, from industrial fatigue modeling to finite element and flow solvers built from scratch.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container project-list">
+
+                <article class="card project">
+                    <span class="project-index">01</span>
+                    <div class="project-body">
+                        <h2>Continuum damage mechanics based fatigue initiation prediction model</h2>
+                        <ul class="tags">
+                            <li>Abaqus user subroutines</li>
+                            <li>Fatigue</li>
+                            <li>Damage mechanics</li>
+                        </ul>
+                        <ul class="highlights">
+                            <li>Developing Abaqus user subroutines for fatigue damage models of ductile materials with a cycle-jump algorithm
+                                to simulate the fatigue lifecycle of coupons and aircraft assemblies, with correlation to test data.</li>
+                        </ul>
+                        <div class="figures">
+                            <figure class="figure">
+                                <button class="figure-btn" type="button" aria-label="Enlarge figure: fatigue damage contour and S-N curves">
+                                    <img src="/res/jpg/cdm_pic.jpg" alt="Abaqus damage contour of a coupon and simulated vs experimental S-N curves" loading="lazy" decoding="async">
+                                </button>
+                                <figcaption>Damage contour at failure and simulated vs. experimental S&ndash;N curves.</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card project">
+                    <span class="project-index">02</span>
+                    <div class="project-body">
+                        <h2>Flutter in functionally graded conical shell under follower force</h2>
+                        <ul class="tags">
+                            <li>Dynamic stability</li>
+                            <li>Functionally graded materials</li>
+                            <li>Shells</li>
+                        </ul>
+                        <ul class="highlights">
+                            <li>Studied the dynamic instability of an FGM truncated conical shell under follower force.</li>
+                            <li>Published in <a href="https://doi.org/10.1016/j.apm.2024.07.025" target="_blank" rel="noopener">Applied Mathematical Modelling</a>
+                                and <a href="https://doi.org/10.1007/s00419-025-02878-5" target="_blank" rel="noopener">Archive of Applied Mechanics</a>.</li>
+                        </ul>
+                        <div class="figures">
+                            <figure class="figure">
+                                <button class="figure-btn" type="button" aria-label="Enlarge figure: graphical abstract">
+                                    <img src="/res/jpg/graphical_abstract.jpg" alt="Graphical abstract: flutter in functionally graded conical shell under follower force" loading="lazy" decoding="async">
+                                </button>
+                                <figcaption>Graphical abstract.</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card project">
+                    <span class="project-index">03</span>
+                    <div class="project-body">
+                        <h2>Investigation of snap-through phenomenon in thin shallow arch using corotational finite element formulation</h2>
+                        <ul class="tags">
+                            <li>MATLAB</li>
+                            <li>Corotational FEM</li>
+                            <li>Geometric nonlinearity</li>
+                        </ul>
+                        <ul class="highlights">
+                            <li>Developed FE code for corotational beam and truss formulations in MATLAB.</li>
+                            <li>Studied the load&ndash;deflection behavior of a thin shallow arch with mid-span point load and compared results with existing literature.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="card project">
+                    <span class="project-index">04</span>
+                    <div class="project-body">
+                        <h2>Static analysis of portal frame by flexibility based beam-column element</h2>
+                        <ul class="tags">
+                            <li>MATLAB</li>
+                            <li>OpenSees</li>
+                            <li>Fiber discretization</li>
+                        </ul>
+                        <ul class="highlights">
+                            <li>Developed FE code in MATLAB for fiber discretization of a flexibility-based element and validated it with OpenSees.</li>
+                            <li>Studied the behaviour of a one-storey portal frame by load- and displacement-controlled static analysis.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="card project">
+                    <span class="project-index">05</span>
+                    <div class="project-body">
+                        <h2>Plane strain problem &ndash; analysis of cantilever retaining wall using CST element</h2>
+                        <ul class="tags">
+                            <li>MATLAB</li>
+                            <li>FEM</li>
+                            <li>Plane strain</li>
+                        </ul>
+                        <ul class="highlights">
+                            <li>Developed FE code for the CST (Constant Strain Triangle) element in MATLAB.</li>
+                            <li>Studied the behaviour of a cantilever retaining wall using the developed code and validated outputs with theoretical results.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="card project">
+                    <span class="project-index">06</span>
+                    <div class="project-body">
+                        <h2>Investigating nonlinear fluid&ndash;structure interaction dynamics using inviscid flow solvers</h2>
+                        <ul class="tags">
+                            <li>Vortex methods</li>
+                            <li>Fluid&ndash;structure interaction</li>
+                            <li>CFD</li>
+                        </ul>
+                        <ul class="highlights">
+                            <li>Developed a solver for the low-fidelity LVM (Lumped Vortex Method) to simulate fluid flow past a flat plate.</li>
+                            <li>Developed a solver for the UVLM (Unsteady Vortex Lattice Method) to simulate fluid flow past a thin airfoil.</li>
+                            <li>Led to a conference paper at <a href="/src/html/pages/publications.html">CNSD-2016</a>.</li>
+                        </ul>
+                        <div class="figures two">
+                            <figure class="figure">
+                                <button class="figure-btn" type="button" aria-label="Enlarge animation: wake generation with LVM">
+                                    <img src="/res/gif/wake_lvm.gif" alt="Animation of wake generation behind a flat plate using the Lumped Vortex Method" loading="lazy" decoding="async">
+                                </button>
+                                <figcaption>Wake generation &mdash; LVM</figcaption>
+                            </figure>
+                            <figure class="figure">
+                                <button class="figure-btn" type="button" aria-label="Enlarge animation: wake generation with UVLM">
+                                    <img src="/res/gif/wake_uvlm.gif" alt="Animation of wake generation behind a thin airfoil using the Unsteady Vortex Lattice Method" loading="lazy" decoding="async">
+                                </button>
+                                <figcaption>Wake generation &mdash; UVLM</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card project">
+                    <span class="project-index">07</span>
+                    <div class="project-body">
+                        <h2>An introduction to structural dynamics, nonlinear dynamics, wind tunnel and a study on the Lorenz system</h2>
+                        <ul class="tags">
+                            <li>Nonlinear dynamics</li>
+                            <li>Chaos</li>
+                        </ul>
+                        <ul class="highlights">
+                            <li>Implemented the modified Gram&ndash;Schmidt decomposition method to find Lyapunov exponents of the Lorenz system.</li>
+                            <li>Developed a script for finding Poincar&eacute; maps of the Lorenz and R&ouml;ssler systems.</li>
+                        </ul>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <dialog class="lightbox" aria-label="Enlarged figure">
+            <button class="lightbox-close" type="button" aria-label="Close">&times;</button>
+            <img alt="">
+        </dialog>
+
+    </main>
+
+    <footer class="site-footer" id="footer">
+        {% include footer.html %}
+    </footer>
+
+    <script type="module" src="/src/js/visitor_count.min.js"></script>
+    <script src="/src/js/site.js"></script>
+</body>
+
+</html>

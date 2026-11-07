@@ -1,0 +1,96 @@
+---
+---
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+    {% include title.html %}
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a class="brand" href="/src/html/pages/home.html" aria-label="Rupsagar Chatterjee, home">
+                <span class="brand-mark">RC</span>
+                <span class="brand-name">Rupsagar Chatterjee</span>
+            </a>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="/src/html/pages/home.html">Home</a>
+                <a href="/src/html/pages/projects.html">Projects</a>
+                <a href="/src/html/pages/publications.html">Publications</a>
+                <a href="/src/html/pages/contact.html" aria-current="page">Contact</a>
+            </nav>
+            <button class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+                <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+                <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <main id="main">
+
+        <section class="page-hero">
+            <div class="container">
+                <h1>Contact</h1>
+                <p>Questions, collaboration ideas &mdash; leave a message with your contact information and I will get back to you.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+
+                <form class="contact-form card" id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+                    <input type="hidden" name="access_key" value="867aaa80-7019-4080-8473-5dd2eeedfb95">
+                    <input type="hidden" name="subject" value="New message from your website">
+                    <input type="hidden" name="from_name" value="Personal website">
+                    <input type="checkbox" name="botcheck" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                    <div class="form-row">
+                        <div class="field">
+                            <label for="cf-name">Name</label>
+                            <input id="cf-name" name="name" type="text" autocomplete="name" required maxlength="100">
+                        </div>
+                        <div class="field">
+                            <label for="cf-email">Email</label>
+                            <input id="cf-email" name="email" type="email" autocomplete="email" required maxlength="200">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="cf-org">Organization <span class="optional">(optional)</span></label>
+                        <input id="cf-org" name="organization" type="text" autocomplete="organization" maxlength="150">
+                    </div>
+
+                    <div class="field">
+                        <label for="cf-message">Message</label>
+                        <textarea id="cf-message" name="message" rows="7" required maxlength="5000"></textarea>
+                    </div>
+
+                    <div class="h-captcha" data-captcha="true"></div>
+
+                    <div class="form-footer">
+                        <button class="btn btn-primary" type="submit">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg>
+                            Send message
+                        </button>
+                        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+                    </div>
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer" id="footer">
+        {% include footer.html %}
+    </footer>
+
+    <script type="module" src="/src/js/visitor_count.min.js"></script>
+    <script src="/src/js/contact.js"></script>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+includes_dir: src/html/utils
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
